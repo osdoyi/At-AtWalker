@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF4874DE1A4AF43100D0E7F3 /* AnalogStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4874DD1A4AF43100D0E7F3 /* AnalogStick.swift */; };
+		DF4874E21A4B010200D0E7F3 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4874E11A4B010200D0E7F3 /* SpriteKit.framework */; };
+		DF4874E41A4B036B00D0E7F3 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4874E31A4B036B00D0E7F3 /* SceneKit.framework */; };
+		DF4874E61A4B101100D0E7F3 /* JoyStickScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4874E51A4B101100D0E7F3 /* JoyStickScene.swift */; };
 		DFDA44581A4A00F9007FD98E /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA44571A4A00F9007FD98E /* DashboardViewController.swift */; };
 		DFDA445A1A4A0111007FD98E /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA44591A4A0111007FD98E /* MusicPlayerViewController.swift */; };
 		DFDA445C1A4A0149007FD98E /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA445B1A4A0149007FD98E /* CreditsViewController.swift */; };
@@ -30,6 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF4874DD1A4AF43100D0E7F3 /* AnalogStick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalogStick.swift; sourceTree = "<group>"; };
+		DF4874E11A4B010200D0E7F3 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		DF4874E31A4B036B00D0E7F3 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		DF4874E51A4B101100D0E7F3 /* JoyStickScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoyStickScene.swift; sourceTree = "<group>"; };
 		DFDA44571A4A00F9007FD98E /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = ../DashboardViewController.swift; sourceTree = "<group>"; };
 		DFDA44591A4A0111007FD98E /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicPlayerViewController.swift; path = ../MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		DFDA445B1A4A0149007FD98E /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreditsViewController.swift; path = ../CreditsViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4874E41A4B036B00D0E7F3 /* SceneKit.framework in Frameworks */,
+				DF4874E21A4B010200D0E7F3 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +77,8 @@
 		DFE985351A40ECA800106EFA = {
 			isa = PBXGroup;
 			children = (
+				DF4874E31A4B036B00D0E7F3 /* SceneKit.framework */,
+				DF4874E11A4B010200D0E7F3 /* SpriteKit.framework */,
 				DFE985401A40ECA800106EFA /* Walker */,
 				DFE985561A40ECA800106EFA /* WalkerTests */,
 				DFE9853F1A40ECA800106EFA /* Products */,
@@ -101,8 +113,10 @@
 				DFDA445D1A4A019F007FD98E /* HowToUseViewController.swift */,
 				DFDA445B1A4A0149007FD98E /* CreditsViewController.swift */,
 				DFDA44591A4A0111007FD98E /* MusicPlayerViewController.swift */,
+				DF4874DD1A4AF43100D0E7F3 /* AnalogStick.swift */,
 				DFDA44571A4A00F9007FD98E /* DashboardViewController.swift */,
 				DFE985421A40ECA800106EFA /* Info.plist */,
+				DF4874E51A4B101100D0E7F3 /* JoyStickScene.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -228,7 +242,9 @@
 				DFE985461A40ECA800106EFA /* ViewController.swift in Sources */,
 				DFDA44581A4A00F9007FD98E /* DashboardViewController.swift in Sources */,
 				DFE985441A40ECA800106EFA /* AppDelegate.swift in Sources */,
+				DF4874E61A4B101100D0E7F3 /* JoyStickScene.swift in Sources */,
 				DFDA445A1A4A0111007FD98E /* MusicPlayerViewController.swift in Sources */,
+				DF4874DE1A4AF43100D0E7F3 /* AnalogStick.swift in Sources */,
 				DFDA445C1A4A0149007FD98E /* CreditsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

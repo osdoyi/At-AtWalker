@@ -10,13 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    //setAnimationDelegate(delegate: AnyObject?)
-    var delegate: AnyObject!
-    
     @IBOutlet weak var LeftDoor: UIImageView!
     @IBOutlet weak var RightDoor: UIImageView!
    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,14 +41,6 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
     }
-    
-    
-//    override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
-//        NSLog("xxx")
-//    }
-   
-
-    
     
 }
 

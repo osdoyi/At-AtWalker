@@ -404,6 +404,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit_background-1" translatesAutoresizingMaskIntoConstraints="NO" id="h7w-BL-3dk">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLc-Az-xAL">
+                                <rect key="frame" x="51" y="54" width="279" height="162"/>
+                                <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="279" id="Kh1-n4-vDN"/>
+                                    <constraint firstAttribute="height" constant="162" id="V9b-ha-dvW"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="NGQ-kw-1nk" id="AGK-6c-vh3"/>
+                                </connections>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDI-Wp-FjI">
                                 <rect key="frame" x="16" y="31" width="27" height="27"/>
                                 <constraints>
@@ -418,10 +429,25 @@
                                     <segue destination="AP3-Zp-IaB" kind="show" id="q1u-gG-S8W"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09j-lP-JjL">
+                                <rect key="frame" x="441" y="170" width="177" height="146"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.5" blue="0.0" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" maximumLineHeight="1" lineHeightMultiple="1"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" red="1" green="0.5" blue="0.0" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="h7w-BL-3dk" firstAttribute="top" secondItem="KLc-Az-xAL" secondAttribute="bottom" constant="-216" id="5hj-7s-Smu"/>
                             <constraint firstItem="h7w-BL-3dk" firstAttribute="leading" secondItem="Zyb-pc-Uqb" secondAttribute="leadingMargin" constant="-16" id="E50-hU-ETC"/>
+                            <constraint firstItem="h7w-BL-3dk" firstAttribute="leading" secondItem="KLc-Az-xAL" secondAttribute="trailing" constant="-330" id="P7D-X4-DVp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="h7w-BL-3dk" secondAttribute="trailing" constant="-16" id="QVi-EZ-dww"/>
                             <constraint firstItem="QDI-Wp-FjI" firstAttribute="leading" secondItem="Zyb-pc-Uqb" secondAttribute="leadingMargin" id="TxA-5l-Z3p"/>
                             <constraint firstItem="h7w-BL-3dk" firstAttribute="top" secondItem="bhg-oq-RaL" secondAttribute="bottom" constant="-20" id="XqX-hQ-WwM"/>
@@ -433,10 +459,14 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="PickerView" destination="KLc-Az-xAL" id="eMr-fp-nyu"/>
+                        <outlet property="infoLabel" destination="09j-lP-JjL" id="oVo-MD-M4X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RS7-h0-eW8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1416.5" y="424.5"/>
+            <point key="canvasLocation" x="1416.5" y="444.5"/>
         </scene>
         <!--MusicPlayer-->
         <scene sceneID="d4V-9a-JD5">
@@ -516,6 +546,6 @@
         <image name="volume" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bpd-Om-o55"/>
+        <segue reference="q1u-gG-S8W"/>
     </inferredMetricsTieBreakers>
 </document>
