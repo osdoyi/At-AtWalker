@@ -11,20 +11,20 @@ import SpriteKit
 class JoyStickScene: SKScene, AnalogStickProtocol {
     
     
-    let moveAnalogStick: AnalogStick = AnalogStick()
+    let AnalogJoyStick: AnalogStick = AnalogStick()
     
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        println("nanik")
-        let bgDiametr: CGFloat = 200
-        let thumbDiametr: CGFloat = 80
-        let joysticksRadius = bgDiametr // / 5
-        moveAnalogStick.bgNodeDiametr = bgDiametr
-        moveAnalogStick.thumbNodeDiametr = thumbDiametr
-        moveAnalogStick.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
-        moveAnalogStick.delagate = self
-        self.addChild(moveAnalogStick)
+        let bgDiametr: CGFloat = 170
+        let thumbDiametr: CGFloat = 160
+        let joysticksRadius = bgDiametr// / 5
+        AnalogJoyStick.bgNodeDiametr = bgDiametr
+        AnalogJoyStick.thumbNodeDiametr = thumbDiametr
+        AnalogJoyStick.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
+        AnalogJoyStick.delagate = self
+
+        self.addChild(AnalogJoyStick)
      
         self.physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
  

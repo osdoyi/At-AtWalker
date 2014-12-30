@@ -12,16 +12,18 @@ class CreditsViewController: UIViewController, UIPickerViewDelegate {
     
     @IBOutlet weak var PickerView: UIPickerView!
     @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var StaffPic: UIImageView!
   
     
     var contributers = ["Dogan Yirmibesoglu","Mert Hayta", "Batuhan Yapanoglu", "Eda Yigit"]
-
+    var imageNames = ["dogan.png","mert.png", "batuhan.png", "eda.png"]
     var info = ["mec & electro & ios & design","photoshop", "android & electornics", "architrect"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         PickerView.delegate = self
         infoLabel.text = info[0]
+        StaffPic.image = UIImage(named:imageNames[0]) as UIImage!
       
     }
 
@@ -46,7 +48,8 @@ class CreditsViewController: UIViewController, UIPickerViewDelegate {
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // if row is selected do the following
         infoLabel.text = info[row]
-        
+        StaffPic.image = UIImage(named:imageNames[row]) as UIImage!
+
     }
     
     func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {

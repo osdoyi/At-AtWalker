@@ -17,7 +17,8 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var VolumeButton: UIButton!
     @IBOutlet weak var LightButton: UIButton!
     @IBOutlet weak var FireButton: UIButton!
-    
+    @IBOutlet weak var joyView: UIView!
+
     
     @IBAction func VolumeButtonTapped(sender: AnyObject) {
         
@@ -38,15 +39,15 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Configure the view.
-        
- //       let scene = JoyStickScene(size: self.view.bounds.size)
-//        //scene.backgroundColor = .whiteColor()
-//          let skView = self.view  as SKView
-////        /* Sprite Kit applies additional optimizations to improve rendering performance */
-//          skView.ignoresSiblingOrder = true
-////        /* Set the scale mode to scale to fit the window */
-//          scene.scaleMode = .AspectFit
-//          skView.presentScene(scene)
+          let scene = JoyStickScene(size: joyView.bounds.size)
+          let JoView = joyView as SKView
+//        /* Sprite Kit applies additional optimizations to improve rendering performance */
+          JoView.ignoresSiblingOrder = true
+          JoView.allowsTransparency = true
+//        /* Set the scale mode to scale to fit the window */
+          scene.scaleMode = .AspectFit
+          scene.backgroundColor = UIColor(patternImage: UIImage(named: "dogan.png")!)
+          JoView.presentScene(scene)
     }
     
     

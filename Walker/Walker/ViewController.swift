@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       // self.view.backgroundColor = UIColor(patternImage: UIImage(named: "app_background_iphone6.png")!)
         // NSLog("xxx")
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(animated: Bool) {
         
-        UIView.animateWithDuration(1.5, delay: 0.01, usingSpringWithDamping: 1, initialSpringVelocity: 3, options: nil, animations: {
+        UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 2, options: nil, animations: {
             self.LeftDoor.frame.origin.x = (0 - self.LeftDoor.frame.size.height)
             self.RightDoor.frame.origin.x = UIScreen.mainScreen().bounds.size.width
             

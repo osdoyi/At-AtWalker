@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF3292A71A5215FE00A84754 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4874E11A4B010200D0E7F3 /* SpriteKit.framework */; };
 		DF4874DE1A4AF43100D0E7F3 /* AnalogStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4874DD1A4AF43100D0E7F3 /* AnalogStick.swift */; };
-		DF4874E21A4B010200D0E7F3 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4874E11A4B010200D0E7F3 /* SpriteKit.framework */; };
 		DF4874E41A4B036B00D0E7F3 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4874E31A4B036B00D0E7F3 /* SceneKit.framework */; };
 		DF4874E61A4B101100D0E7F3 /* JoyStickScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4874E51A4B101100D0E7F3 /* JoyStickScene.swift */; };
 		DFDA44581A4A00F9007FD98E /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA44571A4A00F9007FD98E /* DashboardViewController.swift */; };
@@ -59,8 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF3292A71A5215FE00A84754 /* SpriteKit.framework in Frameworks */,
 				DF4874E41A4B036B00D0E7F3 /* SceneKit.framework in Frameworks */,
-				DF4874E21A4B010200D0E7F3 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +369,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Walker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -379,6 +380,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Walker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
