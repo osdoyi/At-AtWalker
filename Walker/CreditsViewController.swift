@@ -13,16 +13,24 @@ class CreditsViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var PickerView: UIPickerView!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var StaffPic: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var eduLabel: UILabel!
+    @IBOutlet weak var contLabel: UILabel!
   
     
     var contributers = ["Dogan Yirmibesoglu","Mert Hayta", "Batuhan Yapanoglu", "Eda Yigit"]
     var imageNames = ["dogan.png","mert.png", "batuhan.png", "eda.png"]
-    var info = ["mec & electro & ios & design","photoshop", "android & electornics", "architrect"]
-    
+    var info = ["Electronis & Mechanical Engineer","Electrical & Electronics Engineer", "Electrical & Electronics Engineer", "Architect"]
+    var tit = ["Team Leader","Photoshop Guy", "Coder", "Precision Girl"]
+    var edu = ["Ozyegin Universiy","Ozyegin Universiy", "Ozyegin Universiy", "Ozyegin Universiy"]
+    var cont = ["Mech, Circuit, ios, Artistic design","Image designer for the apps", "Android app & Ardunio code", "Artistic design"]
     override func viewDidLoad() {
         super.viewDidLoad()
         PickerView.delegate = self
         infoLabel.text = info[0]
+        titleLabel.text = tit[0]
+        eduLabel.text = edu[0]
+        contLabel.text = cont[0]
         StaffPic.image = UIImage(named:imageNames[0]) as UIImage!
       
     }
@@ -48,6 +56,10 @@ class CreditsViewController: UIViewController, UIPickerViewDelegate {
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // if row is selected do the following
         infoLabel.text = info[row]
+        titleLabel.text = tit[row]
+        eduLabel.text = edu[row]
+        contLabel.text = cont[row]
+        
         StaffPic.image = UIImage(named:imageNames[row]) as UIImage!
 
     }

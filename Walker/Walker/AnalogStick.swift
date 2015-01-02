@@ -104,18 +104,20 @@ class AnalogStick: SKNode {
         super.touchesMoved(touches, withEvent: event);
         for touch: AnyObject in touches {
             let location = touch.locationInNode(self);
-            let xDistance: Float = Float(location.x - self.thumbNode.position.x)
-            let yDistance: Float = Float(location.y - self.thumbNode.position.y)
+            let xDistance: Float = Float(location.x - (self.thumbNode.position.x))
+            let yDistance: Float = Float(location.y - (self.thumbNode.position.y))
+            
             if self.isTracking == true && sqrtf(powf(xDistance, 2) + powf(yDistance, 2)) <= Float(self.bgNodeDiametr * 2) {
                 let xAnchorDistance: CGFloat = (location.x - self.anchorPointInPoints.x)
                 let yAnchorDistance: CGFloat = (location.y - self.anchorPointInPoints.y)
-                if sqrt(pow(xAnchorDistance, 2) + pow(yAnchorDistance, 2)) <= self.thumbNode.size.width {
+                if sqrt(pow(xAnchorDistance, 2) + pow(yAnchorDistance, 2)) <= (self.thumbNode.size.width)/2 {
                     let moveDifference: CGPoint = CGPointMake(xAnchorDistance , yAnchorDistance)
                     self.thumbNode.position = CGPointMake(self.anchorPointInPoints.x + moveDifference.x, self.anchorPointInPoints.y + moveDifference.y)
                 } else {
                     let magV = sqrt(xAnchorDistance * xAnchorDistance + yAnchorDistance * yAnchorDistance)
-                    let aX = self.anchorPointInPoints.x + xAnchorDistance / magV * self.thumbNode.size.width
-                    let aY = self.anchorPointInPoints.y + yAnchorDistance / magV * self.thumbNode.size.width
+                    // arranging the joyticks field of move in a rectangle
+                    let aX = self.anchorPointInPoints.x + xAnchorDistance / magV * self.thumbNode.size.width / 2.4
+                    let aY = self.anchorPointInPoints.y + yAnchorDistance / magV * self.thumbNode.size.width / 2.4
                     self.thumbNode.position = CGPointMake(aX, aY)
                 }
                 let tNAnchPoinXDiff: CGFloat = self.thumbNode.position.x - self.anchorPointInPoints.x;
