@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import SystemConfiguration
 
 class ViewController: UIViewController {
+    
     
     @IBOutlet weak var LeftDoor: UIImageView!
     @IBOutlet weak var RightDoor: UIImageView!
@@ -16,15 +18,26 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // self.view.backgroundColor = UIColor(patternImage: UIImage(named: "app_background_iphone6.png")!)
-        // NSLog("xxx")
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reachabilityStatusChanged", name: "ReachStatusChanged", object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    
+    func reachabilityStatusChanged() {
+        if reachabilityStatus == kNOTREACHABLE
+        {
+            //
+        }
+    }
+    deinit {
+          NSNotificationCenter.defaultCenter().removeObserver(self, name: "ReachStatusChanged", object: nil)
+        }
+   
 
 
     override func viewDidAppear(animated: Bool) {

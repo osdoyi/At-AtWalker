@@ -12,7 +12,7 @@ class JoyStickScene: SKScene, AnalogStickProtocol {
     
     
     let AnalogJoyStick: AnalogStick = AnalogStick()
-    
+    let robotController: Connection = Connection()
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
@@ -42,7 +42,8 @@ class JoyStickScene: SKScene, AnalogStickProtocol {
     
     // MARK: AnalogStickProtocol
     func moveAnalogStick(analogStick: AnalogStick, velocity: CGPoint, angularVelocity: Float) {
-      // string gondermek
+    //robotController.connect()
+        //AnalogJoyStick.xScale
        
     }
 }

@@ -7,17 +7,77 @@
 //
 
 import UIKit
+import SystemConfiguration
+
+let kREACHABLEWITHWIFI = "ReachableWithWIFI"
+let kNOTREACHABLE = "NotReachable"
+let kREACHABLEWITHWWAN = "ReachableWithWWAN"
+
+var reachability: Reachability?
+var reachabilityStatus = kREACHABLEWITHWIFI
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-   
+    var internetReach: Reachability?
+ 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        //sleep(2) // If I want my user to see launch screen at least 2 seconds
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reachabilityChanged:", name: kReachabilityChangedNotification, object: nil)
+        
+        internetReach = Reachability.reachabilityForLocalWiFi()
+        internetReach?.startNotifier()
+        
+        if internetReach != nil{
+            self.statusChangedWithReachability(internetReach!)
+        }
+        
+        //getCurrentWifiHotSpotName()
         return true
+    }
+    
+    
+    
+//    func getCurrentWifiHotSpotName() -> NSString {
+//        var wifiName: NSString = ""
+//        var myArray: NSArray = NSArray(CNCopySupportedInterfaces().release())
+//        println(myArray)
+//        var myDict: CFDictionaryRef = CNCopyCurrentNetworkInfo((CFArrayGetValueAtIndex(myArray, 0))
+//        
+//        // burdaki sorun nasil cozulur ?
+//        // http://stackoverflow.com/questions/4712535/how-do-i-use-captivenetwork-to-get-the-current-wifi-hotspot-name
+//        
+//        return wifiName
+//    }
+    
+    func reachabilityChanged(notification: NSNotification){
+        println("Reachibility Status Changed....")
+        reachability = notification.object as? Reachability
+        self.statusChangedWithReachability(reachability!)
+    }
+    
+    
+    func statusChangedWithReachability(currentReachabilityStatus: Reachability)
+    {
+        var networkStatus: NetworkStatus = currentReachabilityStatus.currentReachabilityStatus()
+        var statusString: String = ""
+        
+        println("StatusValue: \(networkStatus.value)")
+        
+        if networkStatus.value == NotReachable.value{
+            println("Network is not reachable...")
+            reachabilityStatus = kNOTREACHABLE
+        }
+        else if networkStatus.value == ReachableViaWiFi.value {
+            println("Network is reachable via Wifi..")
+            reachabilityStatus = kREACHABLEWITHWIFI
+        } else if networkStatus.value == ReachableViaWWAN.value {
+            println("Reachable via WWAN")
+            reachabilityStatus = kREACHABLEWITHWWAN
+        }
+        NSNotificationCenter.defaultCenter().postNotificationName("ReachStatusChanged", object: nil)
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -40,6 +100,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: kReachabilityChangedNotification, object: nil)
     }
 
 

@@ -315,10 +315,23 @@
                                     <constraint firstAttribute="width" constant="250" id="RL3-OE-njb"/>
                                 </constraints>
                             </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="Gfb-bZ-MlD">
+                                <rect key="frame" x="470" y="173" width="184" height="31"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.49999999999999961" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="aMa-Cs-nU2"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="0.34901960784313724" green="0.15686274509803921" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" red="0.6588235294117647" green="0.6470588235294118" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderDidChangeValue:" destination="AP3-Zp-IaB" eventType="valueChanged" id="dtb-xd-GO7"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="IXz-28-Pm3" firstAttribute="top" secondItem="SL8-KD-7JX" secondAttribute="bottom" constant="14" id="0ch-fX-AgT"/>
+                            <constraint firstItem="SL8-KD-7JX" firstAttribute="leading" secondItem="Gfb-bZ-MlD" secondAttribute="trailing" constant="-50" id="0uY-a0-PhU"/>
                             <constraint firstItem="uCU-rP-670" firstAttribute="top" secondItem="hAC-4L-c5o" secondAttribute="bottom" constant="82" id="22s-JY-zpN"/>
                             <constraint firstItem="CUj-Ki-9eQ" firstAttribute="top" secondItem="hAC-4L-c5o" secondAttribute="bottom" constant="-8" id="3Ya-zE-ncY"/>
                             <constraint firstItem="59K-EA-HhU" firstAttribute="leading" secondItem="fCh-YJ-70p" secondAttribute="leadingMargin" constant="78" id="5hh-hH-TWX"/>
@@ -345,6 +358,7 @@
                             <constraint firstItem="IXz-28-Pm3" firstAttribute="top" secondItem="hAC-4L-c5o" secondAttribute="bottom" constant="208" id="acQ-38-2oj"/>
                             <constraint firstItem="zL3-CG-Kzp" firstAttribute="top" secondItem="DQf-C1-TfK" secondAttribute="top" id="bMR-PS-6W9"/>
                             <constraint firstItem="IXz-28-Pm3" firstAttribute="trailing" secondItem="fCh-YJ-70p" secondAttribute="trailingMargin" id="bnt-nF-ULz"/>
+                            <constraint firstItem="5HG-7t-Hec" firstAttribute="top" secondItem="Gfb-bZ-MlD" secondAttribute="bottom" constant="-203" id="g1z-dN-UBE"/>
                             <constraint firstItem="DQf-C1-TfK" firstAttribute="leading" secondItem="fCh-YJ-70p" secondAttribute="leadingMargin" constant="39" id="hPS-OF-ZRQ"/>
                             <constraint firstItem="uCU-rP-670" firstAttribute="trailing" secondItem="fCh-YJ-70p" secondAttribute="trailingMargin" id="iUM-nj-mOU"/>
                             <constraint firstAttribute="centerY" secondItem="5HG-7t-Hec" secondAttribute="centerY" constant="-4.5" id="jh1-1L-PL8"/>
@@ -377,6 +391,7 @@
                         <outlet property="LightButton" destination="CUj-Ki-9eQ" id="Hkr-UD-h0t"/>
                         <outlet property="VolumeButton" destination="sD6-a9-Bh7" id="k3f-sG-Hcf"/>
                         <outlet property="joyView" destination="wsn-pQ-zbT" id="Ww9-th-hJB"/>
+                        <outlet property="weaponSlider" destination="Gfb-bZ-MlD" id="pxt-F7-5Eu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohO-gw-q6H" userLabel="First Responder" sceneMemberID="firstResponder"/>

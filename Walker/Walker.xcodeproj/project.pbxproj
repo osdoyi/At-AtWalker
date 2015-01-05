@@ -11,6 +11,10 @@
 		DF4874DE1A4AF43100D0E7F3 /* AnalogStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4874DD1A4AF43100D0E7F3 /* AnalogStick.swift */; };
 		DF4874E41A4B036B00D0E7F3 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4874E31A4B036B00D0E7F3 /* SceneKit.framework */; };
 		DF4874E61A4B101100D0E7F3 /* JoyStickScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4874E51A4B101100D0E7F3 /* JoyStickScene.swift */; };
+		DF5201741A57275900A34D94 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5201731A57275900A34D94 /* SystemConfiguration.framework */; };
+		DF84B9EF1A56E7D1004B358C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DF84B9EE1A56E7D1004B358C /* Reachability.m */; };
+		DF9DE2861A599E7D007DEA37 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9DE2851A599E7D007DEA37 /* CoreFoundation.framework */; };
+		DF9DE2881A599ECF007DEA37 /* ChatClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9DE2871A599ECF007DEA37 /* ChatClientViewController.swift */; };
 		DFDA44581A4A00F9007FD98E /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA44571A4A00F9007FD98E /* DashboardViewController.swift */; };
 		DFDA445A1A4A0111007FD98E /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA44591A4A0111007FD98E /* MusicPlayerViewController.swift */; };
 		DFDA445C1A4A0149007FD98E /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA445B1A4A0149007FD98E /* CreditsViewController.swift */; };
@@ -38,6 +42,13 @@
 		DF4874E11A4B010200D0E7F3 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		DF4874E31A4B036B00D0E7F3 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		DF4874E51A4B101100D0E7F3 /* JoyStickScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoyStickScene.swift; sourceTree = "<group>"; };
+		DF5201731A57275900A34D94 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DF5201751A57296600A34D94 /* CaptiveNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptiveNetwork.h; sourceTree = "<group>"; };
+		DF84B9EC1A56E7D1004B358C /* Walker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Walker-Bridging-Header.h"; sourceTree = "<group>"; };
+		DF84B9ED1A56E7D1004B358C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		DF84B9EE1A56E7D1004B358C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		DF9DE2851A599E7D007DEA37 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		DF9DE2871A599ECF007DEA37 /* ChatClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatClientViewController.swift; sourceTree = "<group>"; };
 		DFDA44571A4A00F9007FD98E /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = ../DashboardViewController.swift; sourceTree = "<group>"; };
 		DFDA44591A4A0111007FD98E /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicPlayerViewController.swift; path = ../MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		DFDA445B1A4A0149007FD98E /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreditsViewController.swift; path = ../CreditsViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF9DE2861A599E7D007DEA37 /* CoreFoundation.framework in Frameworks */,
+				DF5201741A57275900A34D94 /* SystemConfiguration.framework in Frameworks */,
 				DF3292A71A5215FE00A84754 /* SpriteKit.framework in Frameworks */,
 				DF4874E41A4B036B00D0E7F3 /* SceneKit.framework in Frameworks */,
 			);
@@ -77,6 +90,8 @@
 		DFE985351A40ECA800106EFA = {
 			isa = PBXGroup;
 			children = (
+				DF9DE2851A599E7D007DEA37 /* CoreFoundation.framework */,
+				DF5201731A57275900A34D94 /* SystemConfiguration.framework */,
 				DF4874E31A4B036B00D0E7F3 /* SceneKit.framework */,
 				DF4874E11A4B010200D0E7F3 /* SpriteKit.framework */,
 				DFE985401A40ECA800106EFA /* Walker */,
@@ -99,6 +114,7 @@
 			children = (
 				DFE985431A40ECA800106EFA /* AppDelegate.swift */,
 				DFE985451A40ECA800106EFA /* ViewController.swift */,
+				DF9DE2871A599ECF007DEA37 /* ChatClientViewController.swift */,
 				DFE985471A40ECA800106EFA /* Main.storyboard */,
 				DFE9854A1A40ECA800106EFA /* Images.xcassets */,
 				DFE9854C1A40ECA800106EFA /* LaunchScreen.xib */,
@@ -110,6 +126,9 @@
 		DFE985411A40ECA800106EFA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DF5201751A57296600A34D94 /* CaptiveNetwork.h */,
+				DF84B9ED1A56E7D1004B358C /* Reachability.h */,
+				DF84B9EE1A56E7D1004B358C /* Reachability.m */,
 				DFDA445D1A4A019F007FD98E /* HowToUseViewController.swift */,
 				DFDA445B1A4A0149007FD98E /* CreditsViewController.swift */,
 				DFDA44591A4A0111007FD98E /* MusicPlayerViewController.swift */,
@@ -117,6 +136,7 @@
 				DFDA44571A4A00F9007FD98E /* DashboardViewController.swift */,
 				DFE985421A40ECA800106EFA /* Info.plist */,
 				DF4874E51A4B101100D0E7F3 /* JoyStickScene.swift */,
+				DF84B9EC1A56E7D1004B358C /* Walker-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -243,8 +263,10 @@
 				DFDA44581A4A00F9007FD98E /* DashboardViewController.swift in Sources */,
 				DFE985441A40ECA800106EFA /* AppDelegate.swift in Sources */,
 				DF4874E61A4B101100D0E7F3 /* JoyStickScene.swift in Sources */,
+				DF9DE2881A599ECF007DEA37 /* ChatClientViewController.swift in Sources */,
 				DFDA445A1A4A0111007FD98E /* MusicPlayerViewController.swift in Sources */,
 				DF4874DE1A4AF43100D0E7F3 /* AnalogStick.swift in Sources */,
+				DF84B9EF1A56E7D1004B358C /* Reachability.m in Sources */,
 				DFDA445C1A4A0149007FD98E /* CreditsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,10 +390,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Teta/Desktop,
+					/Users/Teta/Desktop/frame,
+				);
 				INFOPLIST_FILE = Walker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Walker/Walker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -379,10 +409,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Teta/Desktop,
+					/Users/Teta/Desktop/frame,
+				);
 				INFOPLIST_FILE = Walker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Walker/Walker-Bridging-Header.h";
 			};
 			name = Release;
 		};
