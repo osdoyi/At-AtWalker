@@ -9,6 +9,7 @@
 import UIKit
 import SystemConfiguration
 
+
 let kREACHABLEWITHWIFI = "ReachableWithWIFI"
 let kNOTREACHABLE = "NotReachable"
 let kREACHABLEWITHWWAN = "ReachableWithWWAN"
@@ -44,11 +45,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        var wifiName: NSString = ""
 //        var myArray: NSArray = NSArray(CNCopySupportedInterfaces().release())
 //        println(myArray)
-//        var myDict: CFDictionaryRef = CNCopyCurrentNetworkInfo((CFArrayGetValueAtIndex(myArray, 0))
+//        var myDict: CFDictionaryRef = CNCopySupportedInterfaces()
 //        
+//    
 //        // burdaki sorun nasil cozulur ?
 //        // http://stackoverflow.com/questions/4712535/how-do-i-use-captivenetwork-to-get-the-current-wifi-hotspot-name
-//        
+//    
 //        return wifiName
 //    }
     

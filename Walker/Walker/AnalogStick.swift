@@ -118,12 +118,14 @@ class AnalogStick: SKNode {
                     // arranging the joyticks field of move in a rectangle
                     let aX = self.anchorPointInPoints.x + xAnchorDistance / magV * self.thumbNode.size.width / 2.4
                     let aY = self.anchorPointInPoints.y + yAnchorDistance / magV * self.thumbNode.size.width / 2.4
+                    println()
                     self.thumbNode.position = CGPointMake(aX, aY)
                 }
                 let tNAnchPoinXDiff: CGFloat = self.thumbNode.position.x - self.anchorPointInPoints.x;
                 let tNAnchPoinYDiff: CGFloat = self.thumbNode.position.y - self.anchorPointInPoints.y
                 self.velocity = CGPointMake(tNAnchPoinXDiff, tNAnchPoinYDiff)
                 self.angularVelocity = -atan2f(Float(tNAnchPoinXDiff), Float(tNAnchPoinYDiff))
+            
             }
         }
     }
