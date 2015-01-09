@@ -11,7 +11,8 @@ import UIKit
 class MusicPlayerViewController: UIViewController, UIPickerViewDelegate {
     
     let robotController: Connection = Connection()
-
+    //    let mydashBoard: DashboardViewController = DashboardViewController()
+    
     
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var bacwardButton: UIButton!
@@ -31,8 +32,8 @@ class MusicPlayerViewController: UIViewController, UIPickerViewDelegate {
     
     @IBAction func playPauseButtonTapped(sender: AnyObject) {
         
-         let playImage = UIImage(named:"playButtonpng.png") as UIImage!
-         let pauseImage = UIImage(named:"pButton.png") as UIImage!
+        let playImage = UIImage(named:"playButtonpng.png") as UIImage!
+        let pauseImage = UIImage(named:"pButton.png") as UIImage!
         
         if (playPauseButton.imageForState(UIControlState.Normal) == playImage) {
             
@@ -66,10 +67,12 @@ class MusicPlayerViewController: UIViewController, UIPickerViewDelegate {
         return myTitle
     }
     
-        
-         override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            robotController.closePort()
-            println("portClosed")
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        robotController.closePort()
+        println("portClosed")
+        // mydashBoard.viewDidAppear(false)
     }
-
+    
+    
 }

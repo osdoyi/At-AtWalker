@@ -11,8 +11,4 @@ import UIKit
 
 class HowToUseViewController: UIViewController {
 
-    
-    
-    
-    
 }

@@ -9,12 +9,13 @@
 import UIKit
 import SpriteKit
 import SceneKit
+import SystemConfiguration
 
 
 class DashboardViewController: UIViewController {
     
     let robotController: Connection = Connection()
-
+    var isOpen = 0
     
     @IBOutlet weak var VolumeButton: UIButton!
     @IBOutlet weak var LightButton: UIButton!
@@ -24,7 +25,11 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var sensButton: UIButton!
     @IBOutlet weak var StormButton: UIButton!
     @IBOutlet weak var vaderButton: UIButton!
-
+    @IBOutlet weak var doorLeft: UIImageView!
+    @IBOutlet weak var doorRight: UIImageView!
+    
+    
+    
     
     @IBAction func VolumeButtonTapped(sender: AnyObject) {
         
@@ -32,20 +37,19 @@ class DashboardViewController: UIViewController {
         let VolumeOpened = UIImage(named:"volume.png") as UIImage!
         
         if (VolumeButton.imageForState(UIControlState.Normal) == VolumeOpened) {
-           
+            
             VolumeButton.setImage(VolumeCLosed, forState:UIControlState.Normal)
             robotController.sendMessage("set:VolumeClosed\n")
         } else {
             VolumeButton.setImage(VolumeOpened, forState:UIControlState.Normal)
             robotController.sendMessage("set:VolumeOpened\n")
-          
+            
         }
         
     }
     
     @IBAction func sliderDidChangeValue(sender: UISlider) {
         println(Int(sender.value))
-        
         
     }
     
@@ -54,23 +58,63 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         robotController.connect()
+        
         // Configure the view.
-          let scene = JoyStickScene(size: joyView.bounds.size)
-          let JoView = joyView as SKView
-//        /* Sprite Kit applies additional optimizations to improve rendering performance */
-          JoView.ignoresSiblingOrder = true
-          JoView.allowsTransparency = true
-//        /* Set the scale mode to scale to fit the window */
-          scene.scaleMode = .AspectFit
-          scene.backgroundColor = UIColor(patternImage: UIImage(named: "dogan.png")!)
-          JoView.presentScene(scene)
-          weaponSlider.transform = CGAffineTransformRotate(weaponSlider.transform,270.0/180 * CGFloat(M_PI));
-          let thumbImage = UIImage(named: "weaponnew")
-          weaponSlider.setThumbImage(thumbImage, forState: .Normal)
+        let scene = JoyStickScene(size: joyView.bounds.size)
+        let JoView = joyView as SKView
+        
+        // Sprite Kit applies additional optimizations to improve rendering performance
+        JoView.ignoresSiblingOrder = true
+        JoView.allowsTransparency = true
+        
+        // Set the scale mode to scale to fit the window
+        scene.scaleMode = .AspectFit
+        scene.backgroundColor = UIColor(patternImage: UIImage(named: "dogan.png")!)
+        JoView.presentScene(scene)
+        
+        // Setting slider
+        weaponSlider.transform = CGAffineTransformRotate(weaponSlider.transform,270.0/180 * CGFloat(M_PI));
+        let thumbImage = UIImage(named: "weaponnew")
+        weaponSlider.setThumbImage(thumbImage, forState: .Normal)
+        
+        //Reachability Status
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reachabilityStatusChanged", name: "ReachStatusChanged", object: nil)
+        
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        myAnimation()
     }
     
     
+    
+    func myAnimation() {
+        UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 2, options: nil, animations: {
+            println(self.doorLeft.frame.origin.x)
+            
+            self.doorLeft.frame.origin.x = 0 - self.doorLeft.frame.size.height
+            self.doorRight.frame.origin.x = UIScreen.mainScreen().bounds.size.width
+            } ) { (Bool) -> Void in
+                println(self.doorLeft.frame.origin.x)
+                self.doorRight.alpha = 0
+                self.doorLeft.alpha = 0
+        }
+        
+    }
 
+    
+    func reachabilityStatusChanged() {
+        if reachabilityStatus == kNOTREACHABLE{
+        }
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "ReachStatusChanged", object: nil)
+    }
+    
+    
+    
     @IBAction func LightButtonTapped(sender: AnyObject) {
         
         let LightCLosed = UIImage(named:"light_none2.png") as UIImage!
@@ -84,7 +128,7 @@ class DashboardViewController: UIViewController {
             
             LightButton.setImage(LightOpened, forState:UIControlState.Normal)
             robotController.sendMessage("set:LightsOpened\n")
-           
+            
         }
     }
     
@@ -153,6 +197,6 @@ class DashboardViewController: UIViewController {
         robotController.closePort()
         println("portClosed")
     }
-
+    
     
 }

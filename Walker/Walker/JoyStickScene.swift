@@ -23,17 +23,17 @@ class JoyStickScene: SKScene, AnalogStickProtocol {
         AnalogJoyStick.thumbNodeDiametr = thumbDiametr
         AnalogJoyStick.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
         AnalogJoyStick.delagate = self
-
+        
         self.addChild(AnalogJoyStick)
-     
+        
         self.physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
- 
+        
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         /* Called when a touch begins */
         super.touchesBegan(touches, withEvent: event)
-       
+        
     }
     
     override func update(currentTime: CFTimeInterval) {
@@ -42,8 +42,8 @@ class JoyStickScene: SKScene, AnalogStickProtocol {
     
     // MARK: AnalogStickProtocol
     func moveAnalogStick(analogStick: AnalogStick, velocity: CGPoint, angularVelocity: Float) {
-    //robotController.connect()
+        //robotController.connect()
         //AnalogJoyStick.xScale
-       
+        
     }
 }

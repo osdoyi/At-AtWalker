@@ -125,7 +125,7 @@ class AnalogStick: SKNode {
                 let tNAnchPoinYDiff: CGFloat = self.thumbNode.position.y - self.anchorPointInPoints.y
                 self.velocity = CGPointMake(tNAnchPoinXDiff, tNAnchPoinYDiff)
                 self.angularVelocity = -atan2f(Float(tNAnchPoinXDiff), Float(tNAnchPoinYDiff))
-            
+                
             }
         }
     }

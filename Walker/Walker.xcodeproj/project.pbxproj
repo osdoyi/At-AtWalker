@@ -20,7 +20,6 @@
 		DFDA445C1A4A0149007FD98E /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA445B1A4A0149007FD98E /* CreditsViewController.swift */; };
 		DFDA445E1A4A019F007FD98E /* HowToUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA445D1A4A019F007FD98E /* HowToUseViewController.swift */; };
 		DFE985441A40ECA800106EFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE985431A40ECA800106EFA /* AppDelegate.swift */; };
-		DFE985461A40ECA800106EFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE985451A40ECA800106EFA /* ViewController.swift */; };
 		DFE985491A40ECA800106EFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE985471A40ECA800106EFA /* Main.storyboard */; };
 		DFE9854B1A40ECA800106EFA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE9854A1A40ECA800106EFA /* Images.xcassets */; };
 		DFE9854E1A40ECA800106EFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE9854C1A40ECA800106EFA /* LaunchScreen.xib */; };
@@ -56,7 +55,6 @@
 		DFE9853E1A40ECA800106EFA /* Walker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE985421A40ECA800106EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFE985431A40ECA800106EFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DFE985451A40ECA800106EFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DFE985481A40ECA800106EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFE9854A1A40ECA800106EFA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DFE9854D1A40ECA800106EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				DFE985431A40ECA800106EFA /* AppDelegate.swift */,
-				DFE985451A40ECA800106EFA /* ViewController.swift */,
 				DF9DE2871A599ECF007DEA37 /* ChatClientViewController.swift */,
 				DFE985471A40ECA800106EFA /* Main.storyboard */,
 				DFE9854A1A40ECA800106EFA /* Images.xcassets */,
@@ -260,7 +257,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFDA445E1A4A019F007FD98E /* HowToUseViewController.swift in Sources */,
-				DFE985461A40ECA800106EFA /* ViewController.swift in Sources */,
 				DFDA44581A4A00F9007FD98E /* DashboardViewController.swift in Sources */,
 				DFE985441A40ECA800106EFA /* AppDelegate.swift in Sources */,
 				DF4874E61A4B101100D0E7F3 /* JoyStickScene.swift in Sources */,

@@ -16,7 +16,7 @@ class CreditsViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var eduLabel: UILabel!
     @IBOutlet weak var contLabel: UILabel!
-  
+    
     
     var contributers = ["Dogan Yirmibesoglu","Mert Hayta", "Batuhan Yapanoglu", "Eda Yigit"]
     var imageNames = ["dogan.png","mert.png", "batuhan.png", "eda.png"]
@@ -33,9 +33,9 @@ class CreditsViewController: UIViewController, UIPickerViewDelegate {
         eduLabel.text = edu[1]
         contLabel.text = cont[1]
         StaffPic.image = UIImage(named:imageNames[1]) as UIImage!
-      
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -44,7 +44,7 @@ class CreditsViewController: UIViewController, UIPickerViewDelegate {
         //returns an integer
         return 1
     }
-
+    
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
         return contributers.count
@@ -53,7 +53,7 @@ class CreditsViewController: UIViewController, UIPickerViewDelegate {
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return contributers[row]
     }
- 
+    
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // if row is selected do the following
         infoLabel.text = info[row]
@@ -62,7 +62,7 @@ class CreditsViewController: UIViewController, UIPickerViewDelegate {
         contLabel.text = cont[row]
         
         StaffPic.image = UIImage(named:imageNames[row]) as UIImage!
-
+        
     }
     
     func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
@@ -82,7 +82,7 @@ class CreditsViewController: UIViewController, UIPickerViewDelegate {
         return 290
     }
     
-
-
-
+    
+    
+    
 }
