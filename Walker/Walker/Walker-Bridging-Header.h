@@ -4,4 +4,5 @@
 
 #import "Reachability.h"
 #import "CaptiveNetwork.h"
+#import "CNBridge.h"
 

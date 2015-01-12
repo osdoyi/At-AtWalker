@@ -49,7 +49,8 @@ class DashboardViewController: UIViewController {
     }
     
     @IBAction func sliderDidChangeValue(sender: UISlider) {
-        println(Int(sender.value))
+        var sliderData = ("set:Slider Position into:\(Int(sender.value))")
+        robotController.sendMessage(sliderData)
         
     }
     

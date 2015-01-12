@@ -20,8 +20,10 @@ var reachabilityStatus = kREACHABLEWITHWIFI
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+   // let DashBoard: DashboardViewController = DashboardViewController()
     var window: UIWindow?
     var internetReach: Reachability?
+    
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -34,17 +36,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.statusChangedWithReachability(internetReach!)
         }
         
+        println(self.getCurrentWifiHotSpotName());
+        
+        if (self.getCurrentWifiHotSpotName() != "AT-AT Walker"){
+            //DashBoard.viewDidLoad()
+            var alertView = UIAlertView()
+            alertView.title = "Not Connected to Robot"
+            alertView.message = "Restart App after connecting your phone to AT&AT walker WI-FI"
+            alertView.show()
+            alertView.delegate = self
+        }
+        
         return true
     }
-    //    func getCurrentWifiHotSpotName() -> NSString {
-    //        var wifiName: NSString = ""
-    //        var myArray: NSArray = NSArray(CNCopySupportedInterfaces().release())
-    //        println(myArray)
-    //        var myDict: CFDictionaryRef = CNCopySupportedInterfaces()
-    //        // burdaki sorun nasil cozulur ?
-    //        // http://stackoverflow.com/questions/4712535/how-do-i-use-captivenetwork-to-get-the-current-wifi-hotspot-name
-    //        return wifiName
-    //    }
     
     func reachabilityChanged(notification: NSNotification){
         println("Reachibility Status Changed....")
@@ -95,6 +99,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         NSNotificationCenter.defaultCenter().removeObserver(self, name: kReachabilityChangedNotification, object: nil)
+    }
+    
+    func getCurrentWifiHotSpotName() -> NSString {
+        
+        var cnBridge: CNBridge = CNBridge()
+  // works on iphone not on simulator
+        return cnBridge.currentWifiHotSpotName()
+        
+        
     }
     
     

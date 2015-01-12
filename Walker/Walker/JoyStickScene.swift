@@ -23,7 +23,8 @@ class JoyStickScene: SKScene, AnalogStickProtocol {
         AnalogJoyStick.thumbNodeDiametr = thumbDiametr
         AnalogJoyStick.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
         AnalogJoyStick.delagate = self
-        
+        AnalogJoyStick.thumbNode.position.x = 0
+        AnalogJoyStick.thumbNode.position.y = 0
         self.addChild(AnalogJoyStick)
         
         self.physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
@@ -38,12 +39,18 @@ class JoyStickScene: SKScene, AnalogStickProtocol {
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+        
     }
     
     // MARK: AnalogStickProtocol
     func moveAnalogStick(analogStick: AnalogStick, velocity: CGPoint, angularVelocity: Float) {
-        //robotController.connect()
-        //AnalogJoyStick.xScale
+        //var position = "headX: \(AnalogJoyStick.thumbNode.position.x), headY:\(AnalogJoyStick.thumbNode.position.y)"
+    var position = "\(Int(AnalogJoyStick.thumbNode.position.x)),\(Int(AnalogJoyStick.thumbNode.position.y))"
+        println(position)
         
+// Problem on sending string value of the joystick
+//        if (Int(AnalogJoyStick.thumbNode.position.x) != nil && Int(AnalogJoyStick.thumbNode.position.y) != nil) {
+//           robotController.sendMessage(position)
+//        }
     }
 }

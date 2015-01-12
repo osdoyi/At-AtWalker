@@ -12,6 +12,7 @@
 		DF4874E41A4B036B00D0E7F3 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4874E31A4B036B00D0E7F3 /* SceneKit.framework */; };
 		DF4874E61A4B101100D0E7F3 /* JoyStickScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4874E51A4B101100D0E7F3 /* JoyStickScene.swift */; };
 		DF5201741A57275900A34D94 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5201731A57275900A34D94 /* SystemConfiguration.framework */; };
+		DF6490B91A63C498002F069A /* CNBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6490B81A63C498002F069A /* CNBridge.m */; };
 		DF84B9EF1A56E7D1004B358C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DF84B9EE1A56E7D1004B358C /* Reachability.m */; };
 		DF9DE2861A599E7D007DEA37 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9DE2851A599E7D007DEA37 /* CoreFoundation.framework */; };
 		DF9DE2881A599ECF007DEA37 /* ChatClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9DE2871A599ECF007DEA37 /* ChatClientViewController.swift */; };
@@ -43,6 +44,8 @@
 		DF4874E51A4B101100D0E7F3 /* JoyStickScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoyStickScene.swift; sourceTree = "<group>"; };
 		DF5201731A57275900A34D94 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DF5201751A57296600A34D94 /* CaptiveNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptiveNetwork.h; sourceTree = "<group>"; };
+		DF6490B71A63C498002F069A /* CNBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNBridge.h; sourceTree = "<group>"; };
+		DF6490B81A63C498002F069A /* CNBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNBridge.m; sourceTree = "<group>"; };
 		DF84B9EC1A56E7D1004B358C /* Walker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Walker-Bridging-Header.h"; sourceTree = "<group>"; };
 		DF84B9ED1A56E7D1004B358C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		DF84B9EE1A56E7D1004B358C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				DF5201751A57296600A34D94 /* CaptiveNetwork.h */,
 				DF84B9ED1A56E7D1004B358C /* Reachability.h */,
 				DF84B9EE1A56E7D1004B358C /* Reachability.m */,
+				DF6490B71A63C498002F069A /* CNBridge.h */,
+				DF6490B81A63C498002F069A /* CNBridge.m */,
 				DFDA445D1A4A019F007FD98E /* HowToUseViewController.swift */,
 				DFDA445B1A4A0149007FD98E /* CreditsViewController.swift */,
 				DFDA44591A4A0111007FD98E /* MusicPlayerViewController.swift */,
@@ -257,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFDA445E1A4A019F007FD98E /* HowToUseViewController.swift in Sources */,
+				DF6490B91A63C498002F069A /* CNBridge.m in Sources */,
 				DFDA44581A4A00F9007FD98E /* DashboardViewController.swift in Sources */,
 				DFE985441A40ECA800106EFA /* AppDelegate.swift in Sources */,
 				DF4874E61A4B101100D0E7F3 /* JoyStickScene.swift in Sources */,

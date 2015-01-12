@@ -15,9 +15,12 @@ import SpriteKit
 class AnalogStick: SKNode {
     var velocityLoop: CADisplayLink?
     let thumbNode: SKSpriteNode, bgNode: SKSpriteNode
+    
+    
     func setThumbImage(image: UIImage?, sizeToFit: Bool) {
         var tImage = UIImage(named:"head-1.png") as UIImage!
         self.thumbNode.texture = SKTexture(image: tImage)
+        
         if sizeToFit {
             self.thumbNodeDiametr = min(tImage.size.width, tImage.size.height)
         }
@@ -91,6 +94,8 @@ class AnalogStick: SKNode {
     // touch begin
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         super.touchesBegan(touches, withEvent: event)
+        thumbNode.position.x = 0
+        thumbNode.position.y = 0
         for touch: AnyObject in touches {
             let location: CGPoint = touch.locationInNode(self)
             let touchedNode = nodeAtPoint(location)

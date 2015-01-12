@@ -19,7 +19,7 @@ class MusicPlayerViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var forwardButton: UIButton!
     @IBOutlet weak var musicPPickerView: UIPickerView!
     
-    var musicNames = ["Dogan Yirmibesoglu","Music","Music","Music","Music","Music","Music", "Batuhan Yapanoglu", "Eda Yigit"]
+    var musicNames = ["Imperal Attack","Princess Leia's Theme","The Desert ","The Little People Work","Rescue of the Princess","Inner City", "Cantina Band", "Land of Sandpeople"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,14 +38,15 @@ class MusicPlayerViewController: UIViewController, UIPickerViewDelegate {
         if (playPauseButton.imageForState(UIControlState.Normal) == playImage) {
             
             playPauseButton.setImage(pauseImage, forState:UIControlState.Normal)
-            robotController.sendMessage("set:PauseMusic\n")
+            robotController.sendMessage("set:PlaySelectedMusic:\n")
         } else {
             
             playPauseButton.setImage(playImage, forState:UIControlState.Normal)
-            robotController.sendMessage("set:PlayMusic\n")
+            robotController.sendMessage("set:PauseMusic\n")
             
         }
     }
+    
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         //returns an integer
@@ -65,6 +66,15 @@ class MusicPlayerViewController: UIViewController, UIPickerViewDelegate {
         let musicData = musicNames[row]
         var myTitle = NSAttributedString(string: musicData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 8.0)!,NSForegroundColorAttributeName:UIColor.orangeColor() ])
         return myTitle
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // if row is selected do the following
+        let playImage = UIImage(named:"playButtonpng.png") as UIImage!
+        var selectedMusic = "\(musicNames[row])"
+        robotController.sendMessage("set:selectedMusic: \(selectedMusic)\n")
+        playPauseButton.setImage(playImage, forState:UIControlState.Normal)
+        robotController.sendMessage("set:PauseMusic\n")
     }
     
     
