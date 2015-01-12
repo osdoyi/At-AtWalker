@@ -12,7 +12,7 @@ class JoyStickScene: SKScene, AnalogStickProtocol {
     
     
     let AnalogJoyStick: AnalogStick = AnalogStick()
-    let robotController: Connection = Connection()
+    var robotController: Connection = Connection()
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
@@ -45,12 +45,9 @@ class JoyStickScene: SKScene, AnalogStickProtocol {
     // MARK: AnalogStickProtocol
     func moveAnalogStick(analogStick: AnalogStick, velocity: CGPoint, angularVelocity: Float) {
         //var position = "headX: \(AnalogJoyStick.thumbNode.position.x), headY:\(AnalogJoyStick.thumbNode.position.y)"
-    var position = "\(Int(AnalogJoyStick.thumbNode.position.x)),\(Int(AnalogJoyStick.thumbNode.position.y))"
-        println(position)
+    var position = "headX: \(Int(AnalogJoyStick.thumbNode.position.x)),headY: \(Int(AnalogJoyStick.thumbNode.position.y))"
         
-// Problem on sending string value of the joystick
-//        if (Int(AnalogJoyStick.thumbNode.position.x) != nil && Int(AnalogJoyStick.thumbNode.position.y) != nil) {
-//           robotController.sendMessage(position)
-//        }
+    robotController.sendMessage(position)
+
     }
 }

@@ -49,7 +49,7 @@ class DashboardViewController: UIViewController {
     }
     
     @IBAction func sliderDidChangeValue(sender: UISlider) {
-        var sliderData = ("set:Slider Position into:\(Int(sender.value))")
+        var sliderData = ("set:Slider Position into:\(Int(sender.value))\n")
         robotController.sendMessage(sliderData)
         
     }
@@ -62,6 +62,7 @@ class DashboardViewController: UIViewController {
         
         // Configure the view.
         let scene = JoyStickScene(size: joyView.bounds.size)
+        scene.robotController = robotController
         let JoView = joyView as SKView
         
         // Sprite Kit applies additional optimizations to improve rendering performance

@@ -19,8 +19,7 @@ var reachabilityStatus = kREACHABLEWITHWIFI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-   // let DashBoard: DashboardViewController = DashboardViewController()
+  
     var window: UIWindow?
     var internetReach: Reachability?
     
@@ -36,16 +35,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.statusChangedWithReachability(internetReach!)
         }
         
-        println(self.getCurrentWifiHotSpotName());
-        
-        if (self.getCurrentWifiHotSpotName() != "AT-AT Walker"){
-            //DashBoard.viewDidLoad()
-            var alertView = UIAlertView()
-            alertView.title = "Not Connected to Robot"
-            alertView.message = "Restart App after connecting your phone to AT&AT walker WI-FI"
-            alertView.show()
-            alertView.delegate = self
-        }
+//        println(self.getCurrentWifiHotSpotName());
+//        
+//        if (self.getCurrentWifiHotSpotName() != "AT-AT WALKER"){
+//            //DashBoard.viewDidLoad()
+//            var alertView = UIAlertView()
+//            alertView.title = "Not Connected to Robot"
+//            alertView.message = "Restart App after connecting your phone to AT&AT walker WI-FI"
+//            alertView.show()
+//            alertView.delegate = self
+//        }
         
         return true
     }
@@ -100,15 +99,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         NSNotificationCenter.defaultCenter().removeObserver(self, name: kReachabilityChangedNotification, object: nil)
     }
-    
-    func getCurrentWifiHotSpotName() -> NSString {
-        
-        var cnBridge: CNBridge = CNBridge()
-  // works on iphone not on simulator
-        return cnBridge.currentWifiHotSpotName()
-        
-        
-    }
+//    
+//    func getCurrentWifiHotSpotName() -> NSString {
+//        
+//        var cnBridge: CNBridge = CNBridge()
+//  // works on iphone not on simulator
+//        return cnBridge.currentWifiHotSpotName()
+//        
+//        
+//    }
     
     
 }

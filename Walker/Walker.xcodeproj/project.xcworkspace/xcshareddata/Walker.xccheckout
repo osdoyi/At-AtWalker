@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A46EE23C-D6EE-417F-9E4E-D0DC5D7BF6C5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Walker</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>774F34B93B8CF10CB0EDDBB5524FE652094A78DC</key>
+		<string>https://github.com/osdoyi/At-AtWalker.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Walker/Walker.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>774F34B93B8CF10CB0EDDBB5524FE652094A78DC</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/osdoyi/At-AtWalker.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>774F34B93B8CF10CB0EDDBB5524FE652094A78DC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>774F34B93B8CF10CB0EDDBB5524FE652094A78DC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>At-AtWalker</string>
+		</dict>
+	</array>
+</dict>
+</plist>
